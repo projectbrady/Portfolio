@@ -212,3 +212,135 @@ body {
   height: 100%;
   width: auto;
 }
+
+/* Hamburger button — hidden on desktop */
+#hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 100;
+}
+
+#hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+#hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---- Tablet & small laptops ---- */
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column-reverse;
+    padding: 6vh 5vw;
+    gap: 3em;
+  }
+
+  .main-content {
+    padding: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  #icon-container {
+    justify-content: center;
+  }
+
+  .main-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .main-content h2 {
+    font-size: 1.3rem;
+  }
+
+  #main-card,
+  #second-card,
+  #third-card {
+    width: 40vh;
+  }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 600px) {
+  .navigation-bar {
+    padding: 1.2em 1.5em;
+  }
+
+  #hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  #nav-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-secondary);
+    padding: 1.5em 0;
+    z-index: 99;
+  }
+
+  #nav-container.show {
+    display: block;
+  }
+
+  .navigation-bar {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+
+  .main-container {
+    padding: 4vh 1.5em;
+    gap: 2.5em;
+  }
+
+  .main-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+
+  .main-content .greeting {
+    font-size: 1rem;
+  }
+
+  #main-card,
+  #second-card,
+  #third-card {
+    width: 70vw;
+    max-width: 300px;
+  }
+}
