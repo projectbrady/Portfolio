@@ -317,24 +317,39 @@ body {
   }
 
   .main-container {
-    padding: 4vh 1.5em;
-    gap: 2.5em;
+    padding: 4vh 1.5em 6vh;
+    gap: 3em;
+  }
+
+  .main-content {
+    gap: 0.3em;
+    padding: 0 1em;
+  }
+
+  .main-content .greeting {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.3em;
   }
 
   .main-content h1 {
     font-size: 2.5rem;
+    margin-bottom: 0.4em;
   }
 
   .main-content h2 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 0.8em;
   }
 
   .main-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.8;
   }
 
-  .main-content .greeting {
-    font-size: 1rem;
+  #icon-container {
+    margin-top: 1.8em;
   }
 
   #main-card,
