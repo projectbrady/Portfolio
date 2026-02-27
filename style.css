@@ -1,0 +1,214 @@
+:root {
+  --color-background: #0a0a0f;
+  --color-text: #e8e6f0;
+  --color-accent: #bf5af2;
+  --color-primary: #5e5ce6;
+  --color-sub: #1a1a2e;
+  --color-secondary: #12121c;
+  --font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  padding: 1.5em 4em;
+}
+
+#logo {
+  border: none;
+  background-color: transparent;
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: var(--color-text);
+  padding: 0;
+  cursor: pointer;
+}
+
+#nav-container {
+  flex-grow: 1;
+}
+
+.tabs {
+  display: flex;
+  justify-content: end;
+  gap: 2.5em;
+  align-items: center;
+}
+
+.tab {
+  list-style: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #9a95b0;
+  font-style: normal;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 4px;
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.tab:not(#active):hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.tab:not(:hover)::after {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.tab:hover {
+  color: var(--color-accent);
+}
+
+#active {
+  color: var(--color-accent);
+  border-bottom: 2px var(--color-accent) solid;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 10vh;
+}
+
+.cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-text);
+  padding: 0 4em;
+}
+
+.main-content .greeting {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--color-accent);
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.main-content h1 {
+  font-family: "Anton", sans-serif;
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 0.3em;
+}
+
+.main-content h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  color: #c0bcd0;
+}
+
+.accent {
+  color: var(--color-accent);
+}
+
+.main-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #9a95b0;
+}
+
+.cards {
+  position: relative;
+}
+
+#main-card {
+  width: 50vh;
+  position: relative;
+  z-index: 3;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#main-card img {
+  width: 100%;
+  display: block;
+}
+
+#second-card {
+  background-color: var(--color-accent);
+  width: 50vh;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(4deg);
+  border-radius: 8px;
+}
+
+#third-card {
+  background-color: var(--color-primary);
+  width: 50vh;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%) rotate(8deg);
+  border-radius: 8px;
+}
+
+#icon-container {
+  display: flex;
+  gap: 1.2em;
+  margin-top: 2.5em;
+}
+
+.icon {
+  height: 28px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+.icon img {
+  height: 100%;
+  width: auto;
+}
