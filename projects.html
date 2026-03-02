@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/projectstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <title>Projects | Brady Wemette</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation-bar" id="navigation-bar">
+        <button id="logo" type="button" onclick="location.href='index.html'">Brady Wemette</button>
+        <button id="hamburger" type="button" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="nav-container">
+          <ul class="tabs">
+            <li class="tab" onclick="location.href='index.html'">Home</li>
+            <li class="tab" onclick="location.href='about.html'">About</li>
+            <li class="tab" id="active" onclick="location.href='projects.html'">Projects</li>
+            <li class="tab" onclick="location.href='contact.html'">Contact</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="coming-soon">
+      <h1>Coming <span class="accent">Soon</span></h1>
+      <p>Something's being built here. Check back shortly.</p>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

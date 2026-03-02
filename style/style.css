@@ -215,7 +215,6 @@ body {
   width: auto;
 }
 
-/* Hamburger button — hidden on desktop */
 #hamburger {
   display: none;
   flex-direction: column;
@@ -250,7 +249,6 @@ body {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ---- Tablet & small laptops ---- */
 @media (max-width: 900px) {
   .main-container {
     flex-direction: column-reverse;
@@ -283,7 +281,6 @@ body {
   }
 }
 
-/* ---- Mobile ---- */
 @media (max-width: 600px) {
   .navigation-bar {
     padding: 1.2em 1.5em;

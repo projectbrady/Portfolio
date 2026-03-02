@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/aboutstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <title>About | Brady Wemette</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navigation-bar" id="navigation-bar">
+        <button id="logo" type="button" onclick="location.href='index.html'">Brady Wemette</button>
+        <button id="hamburger" type="button" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div id="nav-container">
+          <ul class="tabs">
+            <li class="tab" onclick="location.href='index.html'">Home</li>
+            <li class="tab" id="active" onclick="location.href='about.html'">About</li>
+            <li class="tab" onclick="location.href='projects.html'">Projects</li>
+            <li class="tab" onclick="location.href='contact.html'">Contact</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="about-hero">
+      <div class="hero-photo">
+        <img src="images/me-bucks.jpg" alt="Brady Wemette" />
+      </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="eyebrow">About Me</span>
+          <h1>Brady<br /><span class="accent">Wemette</span></h1>
+          <p class="hero-role">Web Developer</p>
+          <p class="hero-bio">
+            I love building things: websites, plans, a life worth being proud
+            of. I grew up drawn to creativity and business, and web development
+            is where those two worlds clicked. I also play piano and drums, and
+            the discipline that comes with both bleeds into everything I build.
+          </p>
+          <p class="hero-bio">
+            Outside the editor I'm a family person first, and some of my best
+            moments are on a beach with the people I love most. I'm also a gamer
+            at heart: Rocket League, Minecraft, Rust. Wherever there's a good
+            time to be had, I'm there.
+          </p>
+          <div class="hero-actions">
+            <a href="contact.html" class="cta-btn">
+              Get In Touch <span class="cta-arrow">→</span>
+            </a>
+            <span class="avail-badge">
+              <span class="badge-dot"></span>Available for projects
+            </span>
+          </div>
+          <div class="inline-skills">
+            <span class="skills-label">My Stack</span>
+            <div class="inline-skills-row">
+              <div class="iskill">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML5"
+                />
+                <span>HTML</span>
+              </div>
+              <div class="iskill">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS3"
+                />
+                <span>CSS</span>
+              </div>
+              <div class="iskill">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                />
+                <span>JS</span>
+              </div>
+              <div class="iskill">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                />
+                <span>React</span>
+              </div>
+              <div class="iskill">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                  alt="Python"
+                />
+                <span>Python</span>
+              </div>
+              <div class="iskill">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                  alt="AWS"
+                />
+                <span>AWS</span>
+              </div>
+              <div class="iskill iskill--invert">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                  alt="GitHub"
+                />
+                <span>GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="waveform" aria-hidden="true">
+          <span></span><span></span><span></span><span></span> <span></span
+          ><span></span><span></span><span></span> <span></span><span></span
+          ><span></span><span></span> <span></span><span></span><span></span
+          ><span></span>
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
