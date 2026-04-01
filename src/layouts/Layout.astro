@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+import Header from "../components/header.astro";
+import { Font } from "astro:assets";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Brady Wemette | Professionally Designed Sites</title>
+        <Font cssVariable="--font-anton" preload />
+        <Font cssVariable="--font-times" preload />
+    </head>
+    <body>
+        <Header />
+        <slot />
+    </body>
+</html>

@@ -1,5 +1,6 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
+
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -7,5 +8,24 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+
+  fonts: [
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Anton',
+      cssVariable: '--font-anton',
+      weights: ['400'],
+      styles: ['normal'],
+      subsets: ['latin'],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: 'Times New Roman',
+      cssVariable: '--font-times',
+      weights: ['400'],
+      styles: ['normal'],
+      subsets: ['latin'],
+    }
+  ]
 });

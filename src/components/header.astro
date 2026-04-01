@@ -1,21 +1,39 @@
 ---
-
+const currentPath = Astro.url.pathname;
 ---
+
 <header>
-<nav class="flex items-center py-6 px-16">
-    <!-- <button type="button" onclick="location.href='#'" class="cursor-pointer">Brady Wemette</button> -->
-	<button id="hamburger" type="button" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <div class="grow">
-    <ul class="list-none flex end gap-[2.5em] items-center">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-    </div>
-</nav>
+    <nav class="flex items-center py-6 px-16">
+        <button
+            type="button"
+            onclick="location.href='#'"
+            class="cursor-pointer border-none font-normal not-italic bg-transparent text-[1.5rem] text-[var(--color-text)] font-logo"
+            >Brady Wemette</button
+        >
+        <button id="hamburger" type="button" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="grow">
+            <ul
+                class="list-none flex justify-end gap-[2.5em] items-center font-times"
+            >
+                <li class={`tab ${currentPath === "/" ? "active" : ""}`}>
+                    <a href="/">Home</a>
+                </li>
+                <li class={`tab ${currentPath === "/about" ? "active" : ""}`}>
+                    <a href="/about">About</a>
+                </li>
+                <li
+                    class={`tab ${currentPath === "/projects" ? "active" : ""}`}
+                >
+                    <a href="/projects">Projects</a>
+                </li>
+                <li class={`tab ${currentPath === "/contact" ? "active" : ""}`}>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
